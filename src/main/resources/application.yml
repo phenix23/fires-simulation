@@ -1,0 +1,9 @@
+spring.application.name=fires-simulation
+forest:
+fire:
+height: 20
+width: 20
+propagation-probability: 0.3
+initial-fires:
+- [10, 10]
+- [5, 5]
