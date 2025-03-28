@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         gridState.forEach((row, i) => {
             row.forEach((cell, j) => {
-                const cellElement = document.createElement('div');
+                const cellElement = document.createElement('span');
                 cellElement.className = 'cell';
 
                 switch (cell) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function nextStep() {
         fetch('/api/simulation/next', {
-            method: 'POST'
+            method: 'GET'
         })
             .then(response => response.json())
             .then(data => {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function resetSimulation() {
         fetch('/api/simulation/reset', {
-            method: 'POST'
+            method: 'GET'
         })
             .then(response => response.json())
             .then(data => {
