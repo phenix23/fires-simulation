@@ -1,4 +1,4 @@
-package org.training.firessimulation;
+package org.training.firessimulation.model;
 
 public enum Cell {
     TREE, // Arbre non brûlé
