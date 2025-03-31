@@ -1,10 +1,55 @@
+<!-- src/main/resources/static/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Feu de Forêt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #grid {
+            display: grid;
+            gap: 1px;
+            margin: 20px 0;
+        }
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+        }
+        .tree {
+            background-color: green;
+        }
+        .burning {
+            background-color: red;
+        }
+        .ash {
+            background-color: gray;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        button {
+            padding: 8px 16px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
+<h1>Simulation Feu de Forêt</h1>
 
+<div class="controls">
+    <button id="nextStep">Étape suivante</button>
+    <button id="reset">Réinitialiser</button>
+    <span id="stepCounter">Étape: 0</span>
+    <span id="status">Statut: Actif</span>
+</div>
+
+<div id="grid"></div>
+
+<script src="app.js"></script>
 </body>
 </html>
