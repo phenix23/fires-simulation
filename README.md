@@ -148,7 +148,7 @@ Au niveau de l'implémentation des fonctionnalités décrites dans le schèma d'
     - `Simulation` : Représente la grille de la forêt et son état actuel.
     - `Position` : Représente la position de la cellule par les coordonnées X, Y.
   - Configuration
-    - `ForestFireConfig`: Charge les paramètres de simulation depuis un fichier de configuration.
+    - `ForestFireConfig`: Charge les paramètres de simulation depuis un fichier de configuration `application.yml`.
       
 ## 🔄 Explication du flux
 
@@ -174,7 +174,7 @@ Au niveau de l'implémentation des fonctionnalités décrites dans le schèma d'
    GET /api/simulation/next ```
 
 3. **Calcul nouvel état**
-    - Transformation : BURINIG → ASHE
+    - Transformation : BURNING → ASHE
     - Propagation aléatoire aux 4 voisins (probabilité p)
   
 3. **Retour résultat**
@@ -184,7 +184,7 @@ Au niveau de l'implémentation des fonctionnalités décrites dans le schèma d'
    
 ### 3. Fin de simulation
 - **Condition d'arrêt**
-  La simulation s'arrête automatiquement quand il reste aucune case en état de BURINIG
+  La simulation s'arrête automatiquement quand il reste aucune case en état de BURNING
 - **Réinitialisation manuelle**
   ``` http
    GET /api/simulation/reset
