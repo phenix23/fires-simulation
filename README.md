@@ -163,6 +163,11 @@ Au niveau de l'implémentation des fonctionnalités décrites dans le schèma d'
 - **Chargement frontend**  
   L'interface web récupère l'état initial via le `ForestFireController`
 
+  **Diagramme de séquence pour le uses case "initalisation"**
+
+   ![image](https://github.com/user-attachments/assets/f199f0d0-df67-458e-b1e3-0328d66afc1f)
+
+
 ### 2. Étape de simulation
 
 1. **Action utilisateur**  
@@ -174,13 +179,17 @@ Au niveau de l'implémentation des fonctionnalités décrites dans le schèma d'
    GET /api/simulation/next ```
 
 3. **Calcul nouvel état**
-    - Transformation : BURNING → ASHE
+    - Transformation : BURNING → ASH
     - Propagation aléatoire aux 4 voisins (probabilité p)
   
 3. **Retour résultat**
    ```json
    {"width": 30,"height": 30,"grid": []}
    ```
+   **Diagramme de séquence pour le uses case "Étape de simulation"**
+   
+   ![image](https://github.com/user-attachments/assets/122f7bed-cdc6-4cfe-a4c8-3d57a1ff321a)
+
    
 ### 3. Fin de simulation
 - **Condition d'arrêt**
@@ -189,4 +198,7 @@ Au niveau de l'implémentation des fonctionnalités décrites dans le schèma d'
   ``` http
    GET /api/simulation/reset
   ```
+**Diagramme de séquence pour le uses case "Réinitialisation manuelle"**
+
+![image](https://github.com/user-attachments/assets/443462d7-ca39-46af-8712-21e0b754f981)
 
